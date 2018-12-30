@@ -12,7 +12,7 @@ public class Process {
     /**
      * 进程名
      */
-    private String name;
+    private char name;
     /**
      * 到达时间
      */
@@ -21,21 +21,32 @@ public class Process {
      * 要求服务时间
      */
     private int serviceTime;
+    /**
+     * 优先级
+     */
+    private int priority;
 
     public Process() {
     }
 
-    public Process(String name, int arrivalTime, int serviceTime) {
+    public Process(char name, int arrivalTime, int serviceTime) {
         this.name = name;
         this.arrivalTime = arrivalTime;
         this.serviceTime = serviceTime;
     }
 
-    public String getName() {
+    public Process(char name, int arrivalTime, int serviceTime, int priority) {
+        this.name = name;
+        this.arrivalTime = arrivalTime;
+        this.serviceTime = serviceTime;
+        this.priority = priority;
+    }
+
+    public char getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(char name) {
         this.name = name;
     }
 
@@ -55,12 +66,21 @@ public class Process {
         this.serviceTime = serviceTime;
     }
 
+    public int getPriority() {
+        return priority;
+    }
+
+    public void setPriority(int priority) {
+        this.priority = priority;
+    }
+
     @Override
     public String toString() {
         return "Process{" +
-                "name='" + name + '\'' +
+                "name=" + name +
                 ", arrivalTime=" + arrivalTime +
                 ", serviceTime=" + serviceTime +
+                ", priority=" + priority +
                 '}';
     }
 }

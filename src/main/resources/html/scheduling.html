@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>调度算法</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/scheduling.css">
+</head>
+
+<body>
+<div class="panel panel-warning" style="width: 650px; margin: auto; margin-top: 150px">
+    <div class="panel-body" style="">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>进程名</th>
+                <th>到达时间</th>
+                <th>要求服务时间</th>
+                <th>优先级</th>
+                <th>开始时间</th>
+                <th>完成时间</th>
+                <th>周转时间</th>
+                <th>带权周转时间</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td id="name1">A</td>
+                <td><input type=text id="arrivalTime1" maxlength=2></td>
+                <td><input type=text id="serviceTime1" maxlength=2></td>
+                <td><input type=text id="priority1" maxlength=1></td>
+                <td id="startTime1"></td>
+                <td id="finishTime1"></td>
+                <td id="turnAroundTime1"></td>
+                <td id="weightTurnAroundTime1"></td>
+            </tr>
+            <tr>
+                <td id="name2">B</td>
+                <td><input type=text id="arrivalTime2" maxlength=2></td>
+                <td><input type=text id="serviceTime2" maxlength=2></td>
+                <td><input type=text id="priority2" maxlength=2></td>
+                <td id="startTime2"></td>
+                <td id="finishTime2"></td>
+                <td id="turnAroundTime2"></td>
+                <td id="weightTurnAroundTime2"></td>
+            </tr>
+            <tr>
+                <td id="name3">C</td>
+                <td><input type=text id="arrivalTime3" maxlength=2></td>
+                <td><input type=text id="serviceTime3" maxlength=2></td>
+                <td><input type=text id="priority3" maxlength=2></td>
+                <td id="startTime3"></td>
+                <td id="finishTime3"></td>
+                <td id="turnAroundTime3"></td>
+                <td id="weightTurnAroundTime3"></td>
+            </tr>
+            <tr>
+                <td id="name4">D</td>
+                <td><input type=text id="arrivalTime4" maxlength=2></td>
+                <td><input type=text id="serviceTime4" maxlength=2></td>
+                <td><input type=text id="priority4" maxlength=2></td>
+                <td id="startTime4"></td>
+                <td id="finishTime4"></td>
+                <td id="turnAroundTime4"></td>
+                <td id="weightTurnAroundTime4"></td>
+            </tr>
+            <tr>
+                <td id="name5">E</td>
+                <td><input type=text id="arrivalTime5" maxlength=2></td>
+                <td><input type=text id="serviceTime5" maxlength=2></td>
+                <td><input type=text id="priority5" maxlength=2></td>
+                <td id="startTime5"></td>
+                <td id="finishTime5"></td>
+                <td id="turnAroundTime5"></td>
+                <td id="weightTurnAroundTime5"></td>
+            </tr>
+            </tbody>
+        </table>
+        <input type="submit" id="fcfs" value="先进先出">
+        <input type="submit" id="sjf" value="短作业优先">
+        <input type="submit" id="psa" value="优先级调度">
+        <input type="submit" id="hrrn" value="高响应比优先调度">
+    </div>
+</div>
+</body>
+<script type=text/javascript src=../js/jquery.min.js></script>
+<script type=text/javascript src=../js/scheduling.js></script>
+<script type=text/javascript src=../js/url.js></script>
+</html>

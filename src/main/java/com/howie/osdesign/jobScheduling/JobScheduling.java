@@ -12,7 +12,7 @@ public class JobScheduling {
     /**
      * 进程名
      */
-    private String name;
+    private char name;
     /**
      * 开始时间
      */
@@ -30,7 +30,7 @@ public class JobScheduling {
      */
     private float weightTurnAroundTime;
 
-    public JobScheduling(String name, int startTime, int finishTime, int turnAroundTime, float weightTurnAroundTime) {
+    public JobScheduling(char name, int startTime, int finishTime, int turnAroundTime, float weightTurnAroundTime) {
         this.name = name;
         this.startTime = startTime;
         this.finishTime = finishTime;
@@ -38,11 +38,11 @@ public class JobScheduling {
         this.weightTurnAroundTime = weightTurnAroundTime;
     }
 
-    public String getName() {
+    public char getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(char name) {
         this.name = name;
     }
 
@@ -76,5 +76,16 @@ public class JobScheduling {
 
     public void setWeightTurnAroundTime(float weightTurnAroundTime) {
         this.weightTurnAroundTime = weightTurnAroundTime;
+    }
+
+    @Override
+    public String toString() {
+        return "JobScheduling{" +
+                "name='" + name + '\'' +
+                ", startTime=" + startTime +
+                ", finishTime=" + finishTime +
+                ", turnAroundTime=" + turnAroundTime +
+                ", weightTurnAroundTime=" + weightTurnAroundTime +
+                '}';
     }
 }
